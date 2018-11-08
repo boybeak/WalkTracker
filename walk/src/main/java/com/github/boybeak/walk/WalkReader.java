@@ -18,8 +18,9 @@ public class WalkReader {
     }
 
     public Walk read(File file) {
-        Walk walk = new Walk();
+
         try {
+            Walk walk = new Walk();
 
             FileInputStream inputStream = new FileInputStream(file);
             byte[] versionBytes = new byte[6];
@@ -50,9 +51,11 @@ public class WalkReader {
             walk.setNodes(nodes);
 
             inputStream.close();
+
+            return walk;
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return walk;
+        return null;
     }
 }
