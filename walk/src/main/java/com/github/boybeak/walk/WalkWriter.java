@@ -110,7 +110,7 @@ public class WalkWriter {
         return this;
     }
 
-    public void end() {
+    public void stop() {
 
     }
 
