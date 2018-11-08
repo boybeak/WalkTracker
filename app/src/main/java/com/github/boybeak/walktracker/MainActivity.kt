@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         //设置定位回调监听
         mLocationClient!!.setLocationListener(mLocationListener)
         val option = AMapLocationClientOption()
-        option.setGpsFirst(true)
+        option.isGpsFirst = true
         mLocationClient!!.setLocationOption(option)
 
         PH.ask(
